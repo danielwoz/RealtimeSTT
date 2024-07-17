@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.4.1-runtime-ubuntu22.04 as gpu
+FROM nvidia/cuda:12.4.1-runtime-ubuntu22.04 AS gpu
 
 WORKDIR /app
 
@@ -21,7 +21,7 @@ CMD ["python3", "example_browserclient/server.py"]
 
 # --------------------------------------------
 
-FROM ubuntu:22.04 as cpu
+FROM ubuntu:22.04 AS cpu
 
 WORKDIR /app
 
